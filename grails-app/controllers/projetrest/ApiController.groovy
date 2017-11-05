@@ -4,21 +4,22 @@ import grails.converters.JSON
 
 class ApiController {
 
- //   static allowedMethods = [book: "POST", book: "PUT", book: "DELETE", books: "GET",book: "GET"]
-
-
+    
     def book() {
         switch (request.getMethod()) {
             case "POST":
                 if (!Library.get(params.library.id)) {
-                    render(status: 404, text: "Library inexistante (${params.library.id})")
+                    render(status: 404, text: "Bibliothèque inexistante (${params.library.id})")
+                    response.status = 404
                 }
                 def bookInstance = new Book(params)
                 if (bookInstance.save(flush: true)) {
                     render bookInstance as  JSON
                     response.status = 200
                 } else {
-                    response.status = 400
+                    render text : "Le livre n'a pas pu etre crée, vérifiez que votre requete est correcte"
+                            response.status = 400
+
                 }
                 break
 
@@ -64,11 +65,11 @@ class ApiController {
                         render bookIns as JSON
                     } else {
                         response.status = 400
-                        render "Vérifiez que le format des paramètres est correctes"
+                        render "Vérifiez que la requete est correcte et que chaque paramétre est au bon format"
                     }
                 } else {
                     response.status = 404
-                    render "Le livre n'existe pas"
+                    render "Le livre ${params.id} n'existe pas"
                 }
                 break
 
@@ -87,6 +88,7 @@ class ApiController {
                     render libInstance as JSON
                     response.status = 201
                 } else {
+                    render text : "La bibliothèque n'a pas pu etre crée, vérifiez que votre requete est correcte"
                     response.status = 400
                 }
                 break
@@ -98,7 +100,7 @@ class ApiController {
                 if (params.id) {
                     def libIns = Library.findById(params.id)
                     if(libIns==null){
-                        render text : "Cette librarie n'existe pas"
+                        render text : "Cette bibliotheque n'existe pas"
                         response.status = 404
                     } else {
                     render Library.findById(params.id) as JSON
@@ -116,10 +118,10 @@ class ApiController {
                     if (lib) {
                         lib.delete(flush: true)
                         response.status = 200 //Not Found
-                        render "La librarie ${params.id} a été supprimé"
+                        render "La bibliothèque ${params.id} a été supprimé"
                     } else {
                         response.status = 404 //Not Found
-                        render "La librarie  ${params.id} est introuvable."
+                        render "La  bibliothèque ${params.id} est introuvable."
                     }
                 }
                 break
@@ -134,7 +136,7 @@ class ApiController {
                     }
                     } else {
                         response.status = 404
-                        render "La librairie est introuvable"
+                        render "La  bibliothèque est introuvable"
                     }
                 break
 
@@ -148,15 +150,16 @@ class ApiController {
                 def bookInstance = new Book(params)
                 bookInstance.setLibrary(library)
                 if (bookInstance.save(flush: true)) {
-
+                    render bookInstance as JSON
                     response.status = 201
                 } else {
                     response.status = 400
+                    render text : "Le livre n'a pas pu etre crée, vérifiez que votre requete est correcte"
                 }
                 break
 
             default: response.status = 404
-
+                render text : "La bibliotheque ${params.id} n'existe pas"
                 break
 
             case "GET":
@@ -187,11 +190,11 @@ class ApiController {
                             book.delete(flush: true)
                             library.save(flush: true)
                             response.status = 200
-                            render "Le livre ${params.book.id} a été supprimer de la librarie ${params.id}"
+                            render "Le livre ${params.book.id} a été supprimer de la bibliothèque ${params.id}"
                         }
                      else {
                             response.status = 404
-                            render "Le livre ${params.book.id} n'existe pas dans la librarie ${params.id}"
+                            render "Le livre ${params.book.id} n'existe pas dans la bibliothèque ${params.id}"
                             }
                     }
                 }
@@ -207,7 +210,7 @@ class ApiController {
                         }
                     } else {
                         response.status = 404
-                        render "Le livre ${params.book.id} n'existe pas dans la librarie ${params.id}"
+                        render "Le livre ${params.book.id} n'existe pas dans la bibliothèque${params.id}"
                     }
                 } else {
                     response.status = 404//Internal Server Error
