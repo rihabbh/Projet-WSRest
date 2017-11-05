@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjetRest.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjetRest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjetRest_integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjetRest_integrationTest.iml" group="ProjetRest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjetRest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjetRest_main.iml" group="ProjetRest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjetRest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjetRest_test.iml" group="ProjetRest" />
     </modules>

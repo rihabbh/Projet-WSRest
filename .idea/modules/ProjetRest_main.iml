@@ -10,6 +10,7 @@
           <root url="file://$MODULE_DIR$/../../src/main/webapp" relative="/" />
           <root url="file://$MODULE_DIR$/../../build/assets" relative="/assets" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -20,9 +21,6 @@
       <sourceFolder url="file://$MODULE_DIR$/../../grails-app/controllers" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../grails-app/domain" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../grails-app/init" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../grails-app/services" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../grails-app/taglib" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../grails-app/utils" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../grails-app/conf" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../grails-app/i18n" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../grails-app/views" type="java-resource" />
@@ -36,7 +34,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.5.4.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.5.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.grails:grails-core:3.3.0" level="project" />
     <orderEntry type="module-library" scope="RUNTIME">
       <library>
         <CLASSES>
@@ -46,6 +43,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Gradle: org.grails:grails-core:3.3.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-actuator:1.5.4.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:1.5.4.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.grails:grails-web-boot:3.3.0" level="project" />
@@ -127,8 +125,8 @@
     <orderEntry type="library" name="Gradle: javax.transaction:jta:1.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.tomcat:tomcat-juli:8.5.15" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.8.8" level="project" />
-    <orderEntry type="library" name="Gradle: org.grails:grails-databinding:3.3.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.bertramlabs.plugins:asset-pipeline-core:2.14.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.grails:grails-databinding:3.3.0" level="project" />
     <orderEntry type="library" name="Gradle: org.grails:grails-encoder:3.3.0" level="project" />
     <orderEntry type="library" name="Gradle: org.grails:grails-gsp:3.3.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-webmvc:4.3.9.RELEASE" level="project" />
