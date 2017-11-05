@@ -1,0 +1,584 @@
+{
+	"info": {
+		"name": "TP REST BEN HAMOUDA",
+		"_postman_id": "fbe0967a-a57b-b8fb-50b2-ff3c0cfa8fd7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8080/api/library",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/library",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"library"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/biblio/2/livres/?book.id=4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/biblio/2/livres/?book.id=4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"biblio",
+						"2",
+						"livres",
+						""
+					],
+					"query": [
+						{
+							"key": "book.id",
+							"value": "4",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/biblio/2/livres/?name=Test&author=test&releaseDate=2017-01-01T01:01:01.00Z&isbn=jsqbxhiuz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/biblio/2/livres/?name=Test&author=test&releaseDate=2017-01-01T01:01:01.00Z&isbn=jsqbxhiuz",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"biblio",
+						"2",
+						"livres",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Test",
+							"equals": true
+						},
+						{
+							"key": "author",
+							"value": "test",
+							"equals": true
+						},
+						{
+							"key": "releaseDate",
+							"value": "2017-01-01T01:01:01.00Z",
+							"equals": true
+						},
+						{
+							"key": "isbn",
+							"value": "jsqbxhiuz",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/biblio/1/livres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/biblio/1/livres",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"biblio",
+						"1",
+						"livres"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/libraries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/libraries",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"libraries"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/library/?name=test&yearCreated=2017&address=test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/library/?name=test&yearCreated=2017&address=test",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"library",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test",
+							"equals": true
+						},
+						{
+							"key": "yearCreated",
+							"value": "2017",
+							"equals": true
+						},
+						{
+							"key": "address",
+							"value": "test",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/library/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/library/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"library",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/library/1?yearCreated=1970",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/library/1?yearCreated=1970",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"library",
+						"1"
+					],
+					"query": [
+						{
+							"key": "yearCreated",
+							"value": "1970",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/library/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/library/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"library",
+						"2"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/book/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/book/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"6"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/book/4/?name=Rihabt&author=BEN&releaseDate=2017-01-01T01:01:01.00Z&isbn=test26&library.id=2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/book/4/?name=Rihabt&author=BEN&releaseDate=2017-01-01T01:01:01.00Z&isbn=test26&library.id=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"4",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Rihabt",
+							"equals": true
+						},
+						{
+							"key": "author",
+							"value": "BEN",
+							"equals": true
+						},
+						{
+							"key": "releaseDate",
+							"value": "2017-01-01T01:01:01.00Z",
+							"equals": true
+						},
+						{
+							"key": "isbn",
+							"value": "test26",
+							"equals": true
+						},
+						{
+							"key": "library.id",
+							"value": "2",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/book/5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/book/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"5"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/book/?name=Test&author=test&releaseDate=2017-01-01T01:01:01.00Z&isbn=jsqbxhiuz&library.id=1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/book/?name=Test&author=test&releaseDate=2017-01-01T01:01:01.00Z&isbn=jsqbxhiuz&library.id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Test",
+							"equals": true
+						},
+						{
+							"key": "author",
+							"value": "test",
+							"equals": true
+						},
+						{
+							"key": "releaseDate",
+							"value": "2017-01-01T01:01:01.00Z",
+							"equals": true
+						},
+						{
+							"key": "isbn",
+							"value": "jsqbxhiuz",
+							"equals": true
+						},
+						{
+							"key": "library.id",
+							"value": "1",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/biblio/2/livres/?book.id=4&name=API",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/biblio/2/livres/?book.id=4&name=API",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"biblio",
+						"2",
+						"livres",
+						""
+					],
+					"query": [
+						{
+							"key": "book.id",
+							"value": "4",
+							"equals": true
+						},
+						{
+							"key": "name",
+							"value": "API",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/biblio/2/livres/?book.id=4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/biblio/2/livres/?book.id=4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"biblio",
+						"2",
+						"livres",
+						""
+					],
+					"query": [
+						{
+							"key": "book.id",
+							"value": "4",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

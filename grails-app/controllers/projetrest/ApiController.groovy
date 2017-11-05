@@ -163,23 +163,26 @@ class ApiController {
                 break
 
             case "GET":
-                if (library==null){
-                    response.status = 404
-                    render text:"La bibliotheque n'existe pas"
-                } else if(params.book.id) {
-                    def bookI =  Book.findById(params.book.id)
-                    if (bookI in library.getBooks()){
-                    render bookI as JSON
-                    response.status = 200
-                    } else {
-                        render text:"Ce livre n'est pas dans cette Bibliothéque"
+                if (params.id) {
+                    if (library == null) {
                         response.status = 404
+                        render text: "La bibliotheque n'existe pas"
+                    }/* else if (Book.findById(params.book.id)!= null) {
+                        def bookI = Book.findById(params.book.id)
+                        if (bookI in library.getBooks()) {
+                            render bookI as JSON
+                            response.status = 200
+                        } else {
+                            render text: "Ce livre n'est pas dans cette Bibliothéque"
+                            response.status = 404
+                        }
+                    } */else {
+                        render library.getBooks() as JSON
+                        response.status = 200
                     }
                 }
-        else {
-                        render library.getBooks() as JSON
-                    response.status = 200
-                }
+                response.status = 201
+
                 break
             case "DELETE":
                 if (params.id) {
@@ -210,7 +213,7 @@ class ApiController {
                         }
                     } else {
                         response.status = 404
-                        render "Le livre ${params.book.id} n'existe pas dans la bibliothèque${params.id}"
+                        render "Le livre ${params.book.id} n'existe pas dans la bibliothèque ${params.id}"
                     }
                 } else {
                     response.status = 404//Internal Server Error
