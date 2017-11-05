@@ -9,8 +9,20 @@ class UrlMappings {
             }
         }
 
+
+        "/books" (resources : 'book')
+
+        "/libraries" (resource: 'library'){
+                "/books" (resource: 'book')
+        }
+        "/api/biblio/$id?/livres"(controller: 'api', action: 'linked' )
+    //            {
+      //              "/$id?" (controller: 'api', action: 'book' )
+    //            }//marche pas
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
+
+
 }
